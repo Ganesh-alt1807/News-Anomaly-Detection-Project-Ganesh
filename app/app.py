@@ -1,16 +1,19 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from pathlib import Path
 
-# ---------- Load models and data ----------
+# folder where app.py lives (i.e. /app)
+BASE_DIR = Path(__file__).resolve().parent
 
 @st.cache_resource
 def load_artifacts():
-    tfidf = joblib.load("vectorizer_tfidf.pkl")
-    iso = joblib.load("model_isolation_forest.pkl")
-    clf = joblib.load("model_location_classifier.pkl")
-    df = pd.read_csv("news_with_flags.csv")
+    tfidf = joblib.load(BASE_DIR / "vectorizer_tfidf.pkl")
+    iso = joblib.load(BASE_DIR / "model_isolation_forest.pkl")
+    clf = joblib.load(BASE_DIR / "model_location_classifier.pkl")
+    df = pd.read_csv(BASE_DIR / "news_with_flags.csv")
     return tfidf, iso, clf, df
+
 
 tfidf, iso, clf, df = load_artifacts()
 
@@ -94,3 +97,4 @@ with tab2:
                         f"✅ Reported location `{meta_location}` "
                         f"matches the predicted location."
                     )
+
