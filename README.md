@@ -49,21 +49,18 @@ The app will:
 2️⃣ Install Python & pip  
 3️⃣ Clone this repository:  
 ```bash
-git clone https://github.com/<your-username>/News-Anomaly-Detection-Project-Ganesh.git
+git clone https://github.com/Ganesh-alt1807/News-Anomaly-Detection-Project-Ganesh.git
 cd News-Anomaly-Detection-Project-Ganesh
 pip install -r requirements.txt
 
 
 
-4️⃣ Run Streamlit with public access:
+**Deployed app link**
 
-cd app
-streamlit run app.py --server.address 0.0.0.0 --server.port 8501
+https://news-anomaly-detection-project-ganesh-gw5khzsrbzpfu2qtdmajw4.streamlit.app/
 
 
-5️⃣ Open the app in browser using EC2 public IP:
 
-http://<ec2-ip>:8501
 
 
 👤 Author
