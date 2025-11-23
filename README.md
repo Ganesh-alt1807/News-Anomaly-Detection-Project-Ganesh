@@ -43,12 +43,7 @@ The app will:
 
 ---
 
-## 🌐 Deployment (AWS EC2)
 
-1️⃣ Launch an **Ubuntu EC2 instance**  
-2️⃣ Install Python & pip  
-3️⃣ Clone this repository:  
-```bash
 git clone https://github.com/Ganesh-alt1807/News-Anomaly-Detection-Project-Ganesh.git
 cd News-Anomaly-Detection-Project-Ganesh
 pip install -r requirements.txt
